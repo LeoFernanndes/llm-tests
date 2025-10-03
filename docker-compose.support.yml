@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  database:
+    image: pgvector/pgvector:pg16
+    container_name: "llm-test-postgres"
+    environment:
+      - POSTGRES_DB=llm-tests
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '54301:5432'
+
+  redis:
+    image: redis:alpine
+    container_name: "llm-test-redis"
+    ports:
+      - '63701:6379'

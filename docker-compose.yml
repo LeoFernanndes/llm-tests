@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  frontend:
+    build:
+      context: ./frontend/.
+    ports:
+      - "5173:5173"
+    network_mode:
+      host
+
+  backend:
+    build:
+      context: ./backend/.
+    ports:
+      - "8000:8000"
+
+  database:
+    image: pgvector/pgvector:pg16
+    container_name: "llm-test-postgres"
+    environment:
+      - POSTGRES_DB=llm-tests
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '54301:5432'
+
+  redis:
+    image: redis:alpine
+    container_name: "llm-test-redis"
+    ports:
+      - '63701:6379'

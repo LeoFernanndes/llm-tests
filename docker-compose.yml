@@ -4,7 +4,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend/.
+      context: ./llm-tests-ui/.
     ports:
       - "5173:5173"
     network_mode:
@@ -12,9 +12,11 @@ services:
 
   backend:
     build:
-      context: ./backend/.
+      context: ./llm-tests-backend/.
     ports:
       - "8000:8000"
+    env_file:
+      - ./llm-tests-backend/.env
 
   database:
     image: pgvector/pgvector:pg16

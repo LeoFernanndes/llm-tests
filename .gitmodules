@@ -1,0 +1,6 @@
+[submodule "llm-tests-ui"]
+	path = llm-tests-ui
+	url = git@github.com:LeoFernanndes/llm-tests-ui.git
+[submodule "llm-tests-backend"]
+	path = llm-tests-backend
+	url = git@github.com:LeoFernanndes/llm-tests-backend.git

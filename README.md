@@ -1,4 +1,7 @@
-# LLM TESTS
+# LLM Tests
+<p align="center">
+<img src="https://leofernandes.s3.sa-east-1.amazonaws.com/github/llm-tests/chat-1.png" alt="Chat interface">
+</p>
 
 ## References
 [Navigating the RAG Landscape: A Deep Dive into Frameworks like LangChain, LlamaIndex, and Beyond](https://medium.com/@ajayverma23/navigating-the-rag-landscape-a-deep-dive-into-frameworks-like-langchain-llamaindex-and-beyond-4aed96ff93dd)  
